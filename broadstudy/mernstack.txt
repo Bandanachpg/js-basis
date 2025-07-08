@@ -1,0 +1,9 @@
+js- dynamic typed, interpreted, single threaded programming language
+js is not a compiled language.
+let, const, var
+datatype-template literal``
+operators
+ unary operators 
+ objects(non primitive) and array 
+ freeze- add ra modify garna  mildaina
+ 
