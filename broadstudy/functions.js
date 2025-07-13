@@ -1,105 +1,127 @@
-// block of code
-{
-//
-}
-//dry
+// // block of code
+// // {
+// //
 
-// function function_name () {
-    // function body
-//}
+// // }
+// // dry
 
+// function function_name() {
+// function body
+// }
 
+// // function_name();
+// // ? function declaration
+// // function greet() {
+// //   console.log("hello world");
+// // }
 
-// function_name = function_name();
-//? function declaration
-//function greet () {
-  //  console.log("hello World");
-//}
+// // greet();
 
-//greet();
+// // ? function with parameter
 
+// // let name = "hari";
 
-//? function with parameters
-// let name = "Hari";
-//function greet(name,age) {
- //   console.log("hello", name, age);
-//}
-//console.log(name);
-//greet("Hari",12);
-//greet("Sita", 15);
-//greet();
+// // function greet(name, age) {
+// //   console.log("hello", name, age);
+// // }
 
-// ? default parameters
-//function greet(name = "Guest", age = "20") {
- //   console.log("hello", name, age);
-//}
-//greet("Hari", 12);
-//greet("Sita", 15);
-//greet();
+// // // console.log(name);
 
-//function greet(user) {
-    //console.log("hello",user.name);
-//}
-//const user ={
-   //name: "Hari",
-//};
-//greet(user);
+// // greet("Hari", 20);
+// // greet("Shyam", 40);
+// // greet();
 
- //funtion with return type
+// // ? default parameter
+// // function greet(name = "Guest", age = "age is not provided") {
+// //   console.log("hello", name, age);
+// // }
 
- //function add (a, b) {
-    //let sum= a + b;
- //return sum;
-//}
+// // greet("Hari", 20);
+// // greet("Shyam", 40);
+// // greet();
 
+// // function greet(user) {
+// //   console.log("Hello", user.name);
+// // }
 
-//const result = add(20,30);
-//console.log(result); 
+// // const user = {
+// //   name: "Hari",
+// // };
 
+// // greet(user);
 
-//function product (a = 0, b = 0) {
- //  let product = a * b;
-   //return product;
-//}
+// // function with return type
 
+// function add(a = 0, b = 0) {
+//   //   let sum = a + b;
+//   //   return sum;
 
-const result = product(20,30);
-console.log(result);
-console.log(product());
+//   return a + b;
+// }
 
-// function expression
-// anonymous function
-const div = function (a,b)
-{
-    return a / b;
-}
-console.log(div(20,10));
+// const result = add(20, 30);
 
-//let modulus = function (a, b)
-//{
- //   return a % b;
-//};
+// console.log(result);
+// console.log(add());
 
-//console.log(modulus(20,10));
+// //? function expression
+// //? anonymous function
 
-// arrow function
-const modulus = (a, b) => {
-    return a % b;
-}
-console.log(modulus(20,10));
+// const div = function (a, b) {
+//   return a / b;
+// };
 
-let greet = (name)=>{
-    console.log("hello",name);
+// console.log(div(20, 10));
+
+// // let modulus = function (a, b) {
+// //   return a % b;
+// // };
+
+// //! arrow function
+
+// let modulus = (a, b) => {
+//   return a % b;
+// };
+
+// console.log(modulus(21, 10));
+
+// let greet = (name) => {
+//   console.log("hello", name);
+// };
+
+// greet("Shyam");
+
+//! call back
+
+// const greet = function () {
+
+// }
+
+const parent = (callback) => {
+  console.log("hello from parent");
+  callback("sagar");
 };
-greet("sita");
 
-function greet(name) {
-    console.log("Hello, " + name);
-}
+const child = (name) => {
+  console.log("hello from child", name);
+};
 
-function processUserInput(callback) {
-    const name = "Bandana";
-    callback(name); // calling greet as a callback
-}
+parent(child);
 
-processUserInput(greet);
+// hof
+// function -> takes function  input  or return function as output / both
+
+// const parent = () => {
+//   console.log("hello from parent");
+//   const child = (name) => {
+//     console.log("hello from child", name);
+//   };
+
+//   return child;
+//   // callback("sagar");
+// };
+
+// const childFunction = parent();
+
+// console.log(childFunction);
+// childFunction("hello");
